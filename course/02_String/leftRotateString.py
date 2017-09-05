@@ -22,7 +22,7 @@ def leftRotateString(s, n, m):
     reverseString(s, 0, m - 1)
     reverseString(s, m, n - 1)
     reverseString(s, 0, n - 1)
-    return  s
+    return s
 
 if __name__ == '__main__':
     s = 'abcdef'
