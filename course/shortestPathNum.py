@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+
+"""
+给定无向连通图，输出其最短路径的条数。
+"""
+
 import Queue
 import numpy as np
 

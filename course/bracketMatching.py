@@ -1,5 +1,9 @@
 # -*- coding:utf-8 -*-
 
+"""
+给定字串，仅有“(){}[]”六个字符组成，设计算法，判断该字符串是否有效。
+"""
+
 def isLeftBracket(c):
     return c == '(' or c == '{' or c == '['
 
