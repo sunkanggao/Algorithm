@@ -35,6 +35,7 @@ def LCS(str1, str2):
     s.reverse()
     return ''.join(s)
 
+
 if __name__ == '__main__':
     str1 = 'ABCBDAB'
     str2 = 'BDCABA'
