@@ -1,10 +1,5 @@
 # -*- coding:utf-8 -*-
 
-"""
-字符串循环左移
-时间复杂度O(n)，空间复杂度O(1)
-"""
-
 def reverseString(s, i, j):
     while i < j:
         s[i], s[j] = s[j], s[i]
@@ -14,6 +9,8 @@ def reverseString(s, i, j):
 
 def leftRotateString(s, n, m):
     """
+    字符串循环左移
+    时间复杂度O(n)，空间复杂度O(1)
     :param s: 字符串
     :param n: 字符串长度
     :param m: 循环左移位数
