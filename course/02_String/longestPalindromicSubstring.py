@@ -1,12 +1,9 @@
 # -*- coding:utf-8 -*-
-"""
-用manacher算法解决最长回文子串问题
-"""
-
 
 def manacher(s):
     """
-    :param s:
+    用manacher算法解决最长回文子串问题
+    :param s: 给定字符串
     :return: 数组p，用一个数组p[i]来记录以字符S[i]为中心的最长回文子串
     向左/右扩展的长度（包括s[i]）。则最长回文子串为最大的p[i]-1。
     """
