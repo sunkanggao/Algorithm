@@ -1,15 +1,19 @@
 # -*- coding:utf-8 -*-
 
-"""
-动态规划求解
-最长公共子序列
-Xi是字符串X的i前缀
-Yj是字符串Y的j前缀
-chess[i, j]记录序列Xi和Yj的最长公共子序列长度。
-"""
 import numpy as np
 
+
 def LCS(str1, str2):
+    """
+    动态规划求解
+    最长公共子序列
+    Xi是字符串X的i前缀
+    Yj是字符串Y的j前缀
+    chess[i, j]记录序列Xi和Yj的最长公共子序列长度。
+    :param str1: 字符串1
+    :param str2: 字符串2
+    :return: 字符串1和字符串2的最长公共子序列
+    """
     size1 = len(str1)
     size2 = len(str2)
     chess = np.zeros((size1 + 1, size2 + 1))
@@ -19,6 +23,7 @@ def LCS(str1, str2):
                 chess[i, j] = chess[i - 1, j - 1] + 1
             else:
                 chess[i, j] = max(chess[i - 1, j], chess[i, j - 1])
+    # 回溯
     s = list()
     i = size1
     j = size2
