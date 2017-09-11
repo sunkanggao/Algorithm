@@ -9,6 +9,8 @@ def LIS(array, pre):
     """
     以a[i]结尾的最长递增子序列记为Li，其长度记为b[i]。
     动态规划：b[i] = {max(b[j]) + 1, 0<=j<i 且 a_j<=a_i}
+    时间复杂度：O(NlogN)
+    空间复杂度：O(N)
     :param array: 原数组
     :param pre: 记录以a[i]结尾的最长递增子序列的前一个元素的索引
     :return: 最长递增子序列的长度，以及其最后一个元素的索引
