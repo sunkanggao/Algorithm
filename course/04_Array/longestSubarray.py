@@ -11,16 +11,21 @@ def longestSubarray(array):
         return 1
     m = 1
     cur = 1
+    to = 0
     for i in range(1, size):
         if array[i] - array[i - 1] == 1:
             cur += 1
         else:
-            m = max(cur, m)
+            if cur > m:
+                m = cur
+                to = i
             cur = 1
-    return m
+    return m, array[to -m : to]
 
 
 if __name__ == '__main__':
     array = [1, 2, 3, 34, 56, 57, 58, 59, 60, 61, 99, 121]
-    print longestSubarray(array)
+    m, r = longestSubarray(array)
+    print m
+    print r
 
