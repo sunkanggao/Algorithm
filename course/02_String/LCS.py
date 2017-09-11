@@ -10,6 +10,11 @@ def LCS(str1, str2):
     Xi是字符串X的i前缀
     Yj是字符串Y的j前缀
     chess[i, j]记录序列Xi和Yj的最长公共子序列长度。
+    1. xm = yn时，LCS(Xm, Yn) = LCS(Xm-1, Yn-1) + 1
+    2. xm != yn时，LCS(Xm, Yn) = max(LCS(Xm-1, Yn), LCS(Xm, Yn-1))
+    计算c[][]矩阵的时间复杂度是O(m*n)；
+    根据b[][]矩阵寻找最长公共子序列的过程，由于每次调用至少向上或向左移动一步，这样最多需要（m+n）次就会i = 0或j = 0，
+    也就是算法时间复杂度为O(m+n)。
     :param str1: 字符串1
     :param str2: 字符串2
     :return: 字符串1和字符串2的最长公共子序列
