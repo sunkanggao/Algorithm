@@ -5,6 +5,9 @@ import time
 __metaclass__ = type
 
 class Fibs:
+    """
+    斐波那契数列迭代器
+    """
     def __init__(self, max):
         self.max = max
         self.n, self.a, self.b = 0, 0, 1
