@@ -25,7 +25,7 @@ class MyTest(object):
         return self.__name
 
 class Spring(object):
-    __slots__ = ('tree', 'flower')
+    __slots__ = ('05_Tree', 'flower')
 
 print dir(Spring)
 
