@@ -4,6 +4,7 @@ def longestSubstringK(s, k):
     """
     给定字符串s，计算最多包括k个不同字符的最长子串。
     如给定'eceba'，k=3，则最长子串为'eceb'。
+    双指针法。
     :param s: 字符串
     :param k: 规定的不同字符的个数
     :return:
