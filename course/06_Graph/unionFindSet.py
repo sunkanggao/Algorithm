@@ -37,6 +37,17 @@ class UnionFindSet(object):
         return root
 
 
+    def find2(self, i):
+        """
+        和find等价，递归实现。
+        :param i:
+        :return:
+        """
+        if i != self.m_pParent[i]:
+            self.m_pParent[i] = self.find2(self.m_pParent[i])
+        return self.m_pParent[i]
+
+
     def union(self, i, j):
         """
         合并一条边的节点i和j
